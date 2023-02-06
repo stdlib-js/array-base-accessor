@@ -20,7 +20,7 @@ limitations under the License.
 
 # AccessorArray
 
-[![NPM version][npm-image]][npm-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Create a minimal array-like object supporting the accessor protocol from another array-like object.
 
