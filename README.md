@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@deno/mod.js';
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@v0.0.1-deno/mod.js';
 ```
 
 <a name="constructor"></a>
@@ -154,7 +154,7 @@ v = arr.get( 4 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@deno/mod.js';
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@v0.0.1-deno/mod.js';
 
 // Define a class for creating a minimal sparse array-like object...
 function SparseArray( len, values ) {
