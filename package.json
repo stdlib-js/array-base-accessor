@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-accessor",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create a minimal array-like object supporting the accessor protocol from another array-like object.",
   "license": "Apache-2.0",
   "author": {
