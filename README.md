@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-accessor/tags). For example,
+
+```javascript
 import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@v0.1.0-deno/mod.js';
 ```
 
@@ -165,7 +170,7 @@ v = arr.get( 4 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@v0.1.0-deno/mod.js';
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@deno/mod.js';
 
 // Define a class for creating a minimal sparse array-like object...
 function SparseArray( len, values ) {
