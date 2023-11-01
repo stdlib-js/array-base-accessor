@@ -21,79 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var hasOwnProp = require( '@stdlib/assert-has-own-property' );
-var isAccessorArray = require( '@stdlib/array-base-assert-is-accessor-array' );
-var AccessorArray = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof AccessorArray, 'function', 'main export is a function' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
-});
-
-tape( 'the function is a constructor', function test( t ) {
-	var arr = new AccessorArray( [ 1, 2, 3 ] );
-	t.strictEqual( arr instanceof AccessorArray, true, 'returns an instance' );
-	t.end();
-});
-
-tape( 'the constructor does not require the `new` keyword', function test( t ) {
-	var ctor;
-	var arr;
-
-	ctor = AccessorArray;
-
-	arr = ctor( [ 1, 2, 3 ] );
-	t.strictEqual( arr instanceof AccessorArray, true, 'returns an instance' );
-
-	t.end();
-});
-
-tape( 'the function returns an array-like object supporting the accessor protocol', function test( t ) {
-	var arr = new AccessorArray( [ 1, 2, 3 ] );
-	t.strictEqual( isAccessorArray( arr ), true, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the constructor is a property returning the constructor name', function test( t ) {
-	t.strictEqual( hasOwnProp( AccessorArray, 'name' ), true, 'has property' );
-	t.strictEqual( AccessorArray.name, 'AccessorArray', 'returns expected value' );
-	t.end();
-});
-
-tape( 'the constructor returns an instance having a `length` property for returning the number of array elements', function test( t ) {
-	var arr = new AccessorArray( [ 1, 2, 3 ] );
-	t.strictEqual( arr.length, 3, 'returns expected value' );
-	t.end();
-});
-
-tape( 'the constructor throws an error if not provided an array-like object', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		'5',
-		3.14,
-		-1,
-		NaN,
-		true,
-		false,
-		null,
-		void 0,
-		{},
-		function noop() {}
-	];
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			return new AccessorArray( value );
-		};
-	}
 });
