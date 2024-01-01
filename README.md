@@ -45,30 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-accessor
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var AccessorArray = require( '@stdlib/array-base-accessor' );
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@esm/index.mjs';
 ```
 
 <a name="constructor"></a>
@@ -180,8 +164,13 @@ v = arr.get( 4 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var AccessorArray = require( '@stdlib/array-base-accessor' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import AccessorArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor@esm/index.mjs';
 
 // Define a class for creating a minimal sparse array-like object...
 function SparseArray( len, values ) {
@@ -226,6 +215,10 @@ var dense = new AccessorArray( arr );
 // Print the contents of each array...
 printArray( 'sparse', sparse );
 printArray( 'dense', dense );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -257,7 +250,7 @@ printArray( 'dense', dense );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
