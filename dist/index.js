@@ -1,5 +1,0 @@
-"use strict";var u=function(t,e){return function(){return e||t((e={exports:{}}).exports,e),e.exports}};var n=u(function(v,i){
-var c=require('@stdlib/utils-define-nonenumerable-read-write-accessor/dist'),s=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),f=require('@stdlib/array-base-accessors/dist'),a=require('@stdlib/assert-is-collection/dist'),h=require('@stdlib/error-tools-fmtprodmsg/dist');function g(t){this._buffer.length=t}function _(){return this._buffer.length}function r(t){var e;if(!(this instanceof r))return new r(t);if(!a(t))throw new TypeError(h('1Yn2u',t));return e=f(t),this._buffer=t,this._getter=e.accessors[0],this._setter=e.accessors[1],this}s(r,"name","AccessorArray");c(r.prototype,"length",_,g);s(r.prototype,"get",function(e){return this._getter(this._buffer,e)});s(r.prototype,"set",function(e,o){if(arguments.length<2){this._setter(this._buffer,0,e);return}this._setter(this._buffer,o,e)});i.exports=r
-});var p=n();module.exports=p;
-/** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
